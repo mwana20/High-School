@@ -1,0 +1,6 @@
+{
+  "name": "Mwanaweika High School",
+  "description": "Official website of Mwanaweika High School in Mukono, Uganda. Nurturing academic excellence, discipline, faith, leadership, and future readiness.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
