@@ -78,18 +78,12 @@ interface SchoolContextType {
 
 const SchoolContext = createContext<SchoolContextType | undefined>(undefined);
 
-const stripBasePath = (pathname: string) => {
-  const basePath = import.meta.env.BASE_URL.replace(/\/+$/, '');
-  if (!basePath) return pathname || '/';
-  if (pathname === basePath) return '/';
-  return pathname.startsWith(`${basePath}/`) ? pathname.slice(basePath.length) || '/' : pathname || '/';
-};
-
 export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Path state initialized from browser URL
   const [currentPath, setCurrentPath] = useState<string>(() => {
     if (typeof window !== 'undefined') {
-      return stripBasePath(window.location.pathname);
+      const p = window.location.pathname;
+      return p === '' ? '/' : p;
     }
     return '/';
   });
@@ -97,7 +91,7 @@ export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   // Listen to popstate (browser back/forward)
   useEffect(() => {
     const handlePopState = () => {
-      setCurrentPath(stripBasePath(window.location.pathname));
+      setCurrentPath(window.location.pathname || '/');
     };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
@@ -105,13 +99,10 @@ export const SchoolProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
   const navigate = (path: string) => {
     if (typeof window !== 'undefined') {
-      const normalizedPath = path.startsWith('/') ? path : `/${path}`;
-      const basePath = import.meta.env.BASE_URL.replace(/\/+$/, '');
-      const browserPath = `${basePath}${normalizedPath}`;
-      if (`${window.location.pathname}${window.location.hash}` !== browserPath) {
-        window.history.pushState({}, '', browserPath);
+      if (window.location.pathname !== path) {
+        window.history.pushState({}, '', path);
       }
-      setCurrentPath(normalizedPath);
+      setCurrentPath(path);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
