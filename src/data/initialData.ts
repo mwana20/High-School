@@ -12,20 +12,20 @@ import {
   SchoolStats
 } from '../types';
 
-export const HERO_CAMPUS_IMG = '/src/assets/images/mwanaweika_hero_campus_1791487006252.jpg';
-export const ACADEMICS_LAB_IMG = '/src/assets/images/mwanaweika_academics_lab_1791487019176.jpg';
-export const STUDENT_LIFE_IMG = '/src/assets/images/mwanaweika_student_life_1791487034963.jpg';
-export const SPEECH_DAY_IMG = '/src/assets/images/mwanaweika_speech_day_1791487045784.jpg';
+export const HERO_CAMPUS_IMG = new URL('../assets/images/mwanaweika_hero_campus_1791487006252.jpg', import.meta.url).href;
+export const ACADEMICS_LAB_IMG = new URL('../assets/images/mwanaweika_academics_lab_1791487019176.jpg', import.meta.url).href;
+export const STUDENT_LIFE_IMG = new URL('../assets/images/mwanaweika_student_life_1791487034963.jpg', import.meta.url).href;
+export const SPEECH_DAY_IMG = new URL('../assets/images/mwanaweika_speech_day_1791487045784.jpg', import.meta.url).href;
 
-export const UGANDAN_DIRECTOR_IMG = '/src/assets/images/ugandan_male_director_1791489587808.jpg';
-export const UGANDAN_HEADTEACHER_IMG = '/src/assets/images/ugandan_female_headteacher_1791489600371.jpg';
+export const UGANDAN_DIRECTOR_IMG = new URL('../assets/images/ugandan_male_director_1791489587808.jpg', import.meta.url).href;
+export const UGANDAN_HEADTEACHER_IMG = new URL('../assets/images/ugandan_female_headteacher_1791489600371.jpg', import.meta.url).href;
 export const UGANDAN_FEMALE_HEADTEACHER_IMG = UGANDAN_HEADTEACHER_IMG;
-export const UGANDAN_MALE_TEACHER_IMG = '/src/assets/images/ugandan_male_teacher_1791489611757.jpg';
-export const UGANDAN_FEMALE_TEACHER_IMG = '/src/assets/images/ugandan_female_teacher_1791489622063.jpg';
-export const UGANDAN_MALE_HOD_MATH_IMG = '/src/assets/images/ugandan_male_hod_math_1791490104888.jpg';
-export const UGANDAN_FEMALE_HOD_ENGLISH_IMG = '/src/assets/images/ugandan_female_hod_english_1791490117740.jpg';
-export const UGANDAN_MALE_HOD_AGRIC_IMG = '/src/assets/images/ugandan_male_hod_agric_1791490128699.jpg';
-export const UGANDAN_FEMALE_HOD_SCIENCE_IMG = '/src/assets/images/ugandan_female_hod_science_1791490138130.jpg';
+export const UGANDAN_MALE_TEACHER_IMG = new URL('../assets/images/ugandan_male_teacher_1791489611757.jpg', import.meta.url).href;
+export const UGANDAN_FEMALE_TEACHER_IMG = new URL('../assets/images/ugandan_female_teacher_1791489622063.jpg', import.meta.url).href;
+export const UGANDAN_MALE_HOD_MATH_IMG = new URL('../assets/images/ugandan_male_hod_math_1791490104888.jpg', import.meta.url).href;
+export const UGANDAN_FEMALE_HOD_ENGLISH_IMG = new URL('../assets/images/ugandan_female_hod_english_1791490117740.jpg', import.meta.url).href;
+export const UGANDAN_MALE_HOD_AGRIC_IMG = new URL('../assets/images/ugandan_male_hod_agric_1791490128699.jpg', import.meta.url).href;
+export const UGANDAN_FEMALE_HOD_SCIENCE_IMG = new URL('../assets/images/ugandan_female_hod_science_1791490138130.jpg', import.meta.url).href;
 
 export const INITIAL_ANNOUNCEMENT: Announcement = {
   id: 'ann-1',
