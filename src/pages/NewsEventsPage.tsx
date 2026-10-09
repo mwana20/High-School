@@ -76,7 +76,7 @@ export const NewsEventsPage: React.FC = () => {
                 </p>
               </div>
               <div className="mt-6 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-amber-300 font-semibold">
-                <span>Explore Highlights</span>
+                <span>Explore Highlight</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </div>
